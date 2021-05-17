@@ -1,25 +1,79 @@
 html {
+  font-family: Consolas, monaco, monospace;
+  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
+  padding: 0%;
   background-color: #1b1b1f;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  padding: 5%;
+  scroll-behavior: smooth;
+}
+a {
+  color: white;
+  display: inline-block;
+  word-wrap: normal;
+  padding-top: 20px;
+}
+a:hover {
+  color: #79da79;
 }
 body {
   overflow: overlay;
   overflow-x: hidden;
+  margin: 0%;
+  padding: 0%;
+}
+.content {
+  padding: 0%;
+}
+#aboutMe {
+  width: 100%;
+  overflow: hidden;
+}
+#myWork {
+  box-shadow: 0px 0px 20px 0px black;
+  background-color: #28282e;
+  width: 100%;
+  overflow: hidden;
+}
+#contact {
+  width: 100%;
+  overflow: hidden;
+}
+a.workPiece {
+  display: block;
+  width: 90%;
+  height: 400px;
+  transition: width 1s, height 1s;
+  margin: auto;
+  margin-bottom: 50px;
+  background-color: #36363e;
+  box-shadow: 5px 3px 15px -3px black;
+}
+a.workPiece:hover {
+  width: 95%;
+  height: 450px;
+  transition: width 1s, height 1s;
 }
 p {
   color: white;
   text-shadow: 2px 1px 3px black;
 }
+.sectionTitle {
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+  font-size: 60px;
+  margin: 15px 0px;
+}
 #navbar {
-  width: 150px;
+  width: 200px;
   height: 100%;
   position: fixed;
   z-index: 10;
   left: 0%;
   top: 0%;
   font-size: 30px;
-  background-color: #151519ee;
+  background-color: #36363e;
+  box-shadow: 0px 0px 10px black;
 }
 #navbar.show {
   animation-name: showBar;
@@ -35,7 +89,7 @@ p {
 }
 @keyframes showBar {
   0% {
-    margin-left: -155px;
+    margin-left: -205px;
   }
   100% {
     margin-left: 0px;
@@ -46,123 +100,208 @@ p {
     margin-left: 0px;
   }
   100% {
-    margin-left: -155px;
+    margin-left: -205px;
   }
 }
+#aboutMe.show {
+  animation-name: showAboutMe;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+#aboutMe.hide {
+  animation-name: hideAboutMe;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes showAboutMe {
+  0% {
+    height: 300px;
+  }
+  100% {
+    height: fit-content;
+  }
+}
+@keyframes hideAboutMe {
+  0% {
+    height: fit-content;
+  }
+  100% {
+    height: 300px;
+  }
+}
+#myWork.show {
+  animation-name: showMyWork;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+#myWork.hide {
+  animation-name: hideMyWork;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes showMyWork {
+  0% {
+    height: 300px;
+  }
+  100% {
+    height: fit-content;
+  }
+}
+@keyframes hideMyWork {
+  0% {
+    height: fit-content;
+  }
+  100% {
+    height: 300px;
+  }
+}
+#contact.show {
+  animation-name: showContact;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+#contact.hide {
+  animation-name: hideContact;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes showContact {
+  0% {
+    height: 300px;
+  }
+  100% {
+    height: fit-content;
+  }
+}
+@keyframes hideContact {
+  0% {
+    height: fit-content;
+  }
+  100% {
+    height: 300px;
+  }
+}
+
 #navButton {
   position: relative;
   left: 100px;
   top: 0%;
   float: right;
 }
+#navButton:hover {
+  color: #79da79;
+}
 .navList {
   position: fixed;
   top: 20%;
   height: 100%;
-  width: 140px;
+  width: 150px;
   float: left;
-  text-align: center;
+  text-align: left;
   margin-left: 0px;
   height: fit-content;
   border-top: #79da79 2px solid;
-  margin: 5px;
+  margin: 25px;
+}
+.accent {
+  color: #79da79;
+  animation-name: accentFadeIn;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  display: inline-block;
+}
+img.portrait {
+  box-shadow: 3px 2px 7px black;
+  animation-name: slideInFromRightWithFadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+.introduction {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+}
+p.longText {
+  word-wrap: break-word;
+  text-indent: 50px;
+  text-align: justify;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-delay: 4s;
 }
 
 @media only screen and (max-width: 500pt) {
+  #aboutMe {
+    padding: 5%;
+  }
   img.portrait {
     width: 90%;
     display: block;
-    margin: auto;
-    box-shadow: 3px 2px 7px black;
+    margin: 0%;
     margin-bottom: 4%;
-    animation-name: slideInFromRightWithFadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-    animation-delay: 1s;
+  }
+  .imageContainer {
+    padding: 5%;
   }
   p.header {
     font-size: 6vw;
     margin: 0px;
     margin-bottom: 15px;
   }
-  .introduction {
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-    animation-delay: 3s;
-  }
   p.longText {
-    word-wrap: break-word;
-    text-indent: 50px;
-    text-align: justify;
-    font-size: 4vw;
-	animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-    animation-delay: 4s;
+    font-size: min(25px, 10vw);
   }
   .headerDescription {
-    float: right;
-    width: 100%;
+    float: center;
+    width: 90%;
     padding-top: 4%;
     border-top: #79da79 1px solid;
   }
-  .accent {
-    color: #79da79;
-	animation-name: accentFadeIn;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-    animation-delay: 1s;
-    display: inline-block;
-  }
   @keyframes accentFadeIn {
-  0% {
-    opacity: 0;
-    font-size: 50vw;
-    transform: translateY(-20%);
-  }
-  70% {
-    opacity: 1;
-    font-size: 50vw;
-    transform: translateY(-20%);
-  }
-  100% {
-    opacity: 1;
-    font-size: 6vw;
-    transform: translateY(0%);
-  }
-}
-  .aboutMe {
-    width: 90%;
-    height: 400px;
-    margin: auto;
+    0% {
+      opacity: 0;
+      font-size: 50vw;
+      transform: translateY(-20%);
+    }
+    70% {
+      opacity: 1;
+      font-size: 50vw;
+      transform: translateY(-20%);
+    }
+    100% {
+      opacity: 1;
+      font-size: 6vw;
+      transform: translateY(0%);
+    }
   }
 }
 
 @media only screen and (min-width: 500pt) {
-  body {
-    padding-top: 15%;
-  }
   img.portrait {
     max-height: 100%;
     max-height: 390px;
     max-width: 90%;
-    box-shadow: 3px 2px 7px black;
-    animation-name: slideInFromRightWithFadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-    animation-delay: 1s;
   }
   .imageContainer {
     max-height: 100%;
     max-width: 40%;
     padding: 2%;
     float: right;
+    margin: 80px 0px 50px 0px;
     border-left: #79da79 1px solid;
   }
   .headerDescription {
@@ -170,66 +309,32 @@ p {
     width: 50%;
     height: 100%;
     padding-right: 5%;
+    margin: 80px 0px 50px 0px;
     position: relative;
   }
   p.header {
-    font-size: 3vw;
-    margin: 0px;
-    position: relative;
-    top: 10%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-  .introduction {
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-    animation-delay: 3s;
+    font-size: 3.4vw;
+    margin: 40px 0px;
   }
   p.longText {
-    word-wrap: break-word;
-    text-indent: 50px;
-    text-align: justify;
-    font-size: min(2vw, 28px);
-    position: relative;
-    top: 10%;
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-    animation-delay: 4s;
-  }
-  .accent {
-    color: #79da79;
-    animation-name: accentFadeIn;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-    animation-delay: 1s;
-    display: inline-block;
+    font-size: min(2.5vw, 28px);
   }
   @keyframes accentFadeIn {
-  0% {
-    opacity: 0;
-    font-size: 32vw;
-    transform: translateY(30%);
-  }
-  70% {
-    opacity: 1;
-    font-size: 32vw;
-    transform: translateY(30%);
-  }
-  100% {
-    opacity: 1;
-    font-size: 3vw;
-    transform: translateY(0%);
-  }
-}
-  .aboutMe {
-    width: 90%;
-    height: 400px;
-    margin: auto;
+    0% {
+      opacity: 0;
+      font-size: 32vw;
+      transform: translateY(-20%);
+    }
+    70% {
+      opacity: 1;
+      font-size: 32vw;
+      transform: translateY(min(-20%, -100px));
+    }
+    100% {
+      opacity: 1;
+      font-size: 3vw;
+      transform: translateY(0%);
+    }
   }
 }
 

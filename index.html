@@ -16,13 +16,13 @@
     <div id="navbar" class="hide">
       <p id="navButton">MENU</p>
       <div class="navList">
-        <p class="navElement">About Me</p>
-        <p class="navElement">My work</p>
-        <p class="navElement">Contact</p>
+        <a href="#aboutMe" id="goToAboutMe" class="navElement">About Me</a>
+        <a href="#myWork" id="goToMyWork" class="navElement">My Work</a>
+        <a href="#contact" id="goToContact" class="navElement">Contact</a>
       </div>
     </div>
     <div class="content">
-      <div class="aboutMe">
+      <div id="aboutMe" class="show">
         <div class="imageContainer">
           <img
             class="portrait"
@@ -42,6 +42,15 @@
             hours I like to sit back, grab a cup of tea and play my bass guitar.
           </p>
         </div>
+      </div>
+      <div id="myWork" class="show">
+        <p class="sectionTitle">My Work</p>
+        <a href="https://github.com/Dkr0l/WeatherAnalysisSystemForTravelling" class="workPiece"></a>
+        <a href="https://github.com/Dkr0l/portfolioWebsite" class="workPiece"></a>
+      </div>
+      </div>
+      <div id="contact" class="show">
+        <p class="sectionTitle">Contact</p>
       </div>
     </div>
     <script src="index.js"></script>
