@@ -45,6 +45,5 @@ document.getElementById('goToContact').onclick=function(){
 //detect currently scrolled part
 window.onscroll=function(){
     let body=document.body;
-    let scrollPercentage=(body.scrollTop+window.innerHeight)/body.scrollHeight;
     console.log(scrollPercentage);
 };
