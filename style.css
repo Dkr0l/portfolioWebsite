@@ -37,19 +37,60 @@ body {
   overflow: hidden;
 }
 a.workPiece {
-  display: block;
-  width: 90%;
-  height: 400px;
+  position: relative;
+  display: flex;
+  width: min(600px, 100%);
+  height: min(335px, fit-content);
   transition: width 1s, height 1s;
   margin: auto;
   margin-bottom: 50px;
   background-color: #36363e;
   box-shadow: 5px 3px 15px -3px black;
+  padding: 0;
+  overflow: hidden;
 }
 a.workPiece:hover {
-  width: 95%;
-  height: 450px;
+  width: min(900px, 100%);
+  height: fit-content;
   transition: width 1s, height 1s;
+}
+#weatherApp img {
+  width: calc(100% / 3);
+  height: max-content;
+}
+#portfolioWebsite img {
+  width: 100%;
+  height: max-content;
+}
+.workPieceCaption {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 15, 0.65) 0%,
+    rgba(0, 0, 15, 0.5) 80%,
+    rgba(0, 0, 15, 0.3) 100%
+  );
+  mix-blend-mode: luminosity;
+}
+.workPieceCaption p {
+  position: absolute;
+  top: 80px;
+  left: calc(50% - 300px);
+  width: 600px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+.workTitle {
+  font-size: 50px;
+}
+.adnotation {
+  font-size: 40px;
+  font-weight: normal;
+  margin-top: 315px;
 }
 p {
   color: white;
@@ -246,6 +287,18 @@ p.longText {
 @media only screen and (max-width: 500pt) {
   #aboutMe {
     padding: 5%;
+  }
+  .workPieceCaption p {
+    width: 100%;
+    left: 0;
+  }
+  .workTitle {
+    font-size: 7vw;
+  }
+  .adnotation {
+    font-size: 7vw;
+    font-weight: normal;
+    margin-top: 315px;
   }
   img.portrait {
     width: 90%;
