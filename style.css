@@ -25,6 +25,7 @@ body {
 #aboutMe {
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 #myWork {
   box-shadow: 0px 0px 20px 0px black;
@@ -42,8 +43,7 @@ a.workPiece {
   width: min(600px, 100%);
   height: min(335px, fit-content);
   transition: width 1s, height 1s;
-  margin: auto;
-  margin-bottom: 50px;
+  margin: 70px auto;
   background-color: #36363e;
   box-shadow: 5px 3px 15px -3px black;
   padding: 0;
@@ -99,18 +99,19 @@ p {
 .sectionTitle {
   color: white;
   text-align: center;
-  width: 100%;
+  width: fit-content;
   height: fit-content;
   font-size: 60px;
-  margin: 15px 0px;
+  margin: 40px auto;
+  border-bottom: #79da79 1px solid;
 }
 #navbar {
   width: 200px;
-  height: 100%;
+  height: 250px;
   position: fixed;
   z-index: 10;
   left: 0%;
-  top: 0%;
+  top: 5%;
   font-size: 30px;
   background-color: #36363e;
   box-shadow: 0px 0px 10px black;
@@ -230,16 +231,25 @@ p {
 
 #navButton {
   position: relative;
-  left: 100px;
+  left: 80px;
   top: 0%;
   float: right;
+}
+#toggleAboutMe {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+.disabled {
+  display: none;
 }
 #navButton:hover {
   color: #79da79;
 }
 .navList {
   position: fixed;
-  top: 20%;
+  top: 6%;
   height: 100%;
   width: 150px;
   float: left;
@@ -308,6 +318,7 @@ p.longText {
   }
   .imageContainer {
     padding: 5%;
+    margin-top: 50px;
   }
   p.header {
     font-size: 6vw;
@@ -322,6 +333,7 @@ p.longText {
     width: 90%;
     padding-top: 4%;
     border-top: #79da79 1px solid;
+    margin-bottom: 50px;
   }
   @keyframes accentFadeIn {
     0% {
@@ -353,7 +365,7 @@ p.longText {
     max-width: 40%;
     padding: 2%;
     float: right;
-    margin: 80px 0px 50px 0px;
+    margin: 100px 0;
     border-left: #79da79 1px solid;
   }
   .headerDescription {
