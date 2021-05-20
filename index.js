@@ -26,15 +26,15 @@ navButton.onclick=function(){
     let navbar=document.getElementById('navbar');
     navbar.classList.toggle('hide');
     navbar.classList.toggle('show');
-    let showAboutMe=document.getElementById('showAboutMe').classList;
-    showAboutMe.toggle('hide');
-    showAboutMe.toggle('show');
 };
 
 //toggle About Me section
 document.getElementById('toggleAboutMe').onclick=function(){
     document.getElementById('showAboutMe').classList.toggle('disabled');
     document.getElementById('lessAboutMe').classList.toggle('disabled');
+    let moreAboutMe=document.getElementById('moreAboutMe');
+    moreAboutMe.classList.toggle('hide');
+    moreAboutMe.classList.toggle('show');
 }
 
 //on menu click
