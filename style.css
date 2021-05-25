@@ -3,8 +3,47 @@ html {
   padding: 0%;
   scroll-behavior: smooth;
 }
+p {
+  color: white;
+  text-shadow: 2px 1px 3px black;
+}
 a {
   color: white;
+  text-decoration: none;
+}
+#navbar {
+  width: 200px;
+  height: 230px;
+  position: fixed;
+  z-index: 10;
+  left: 0%;
+  top: 5%;
+  font-size: 30px;
+  background-color: #36363e;
+  box-shadow: 0px 0px 10px black;
+}
+#navButton {
+  position: relative;
+  left: 80px;
+  top: 0%;
+  float: right;
+}
+#navButton:hover {
+  color: #79da79;
+}
+.navList {
+  position: fixed;
+  top: 6%;
+  height: 100%;
+  width: 150px;
+  float: left;
+  text-align: left;
+  margin-left: 0px;
+  height: fit-content;
+  border-top: #79da79 2px solid;
+  margin: 25px;
+}
+#navbar a {
   display: inline-block;
   word-wrap: normal;
   padding-top: 20px;
@@ -26,6 +65,7 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
+  padding: 100px 0 50px 0;
 }
 #myWork {
   box-shadow: 0px 0px 20px 0px black;
@@ -37,13 +77,25 @@ body {
   width: 100%;
   overflow: hidden;
 }
+#email {
+  text-decoration: underline;
+}
+#contact p:not(.sectionTitle) {
+  width: fit-content;
+  margin: 100px auto;
+}
+#linkedinLogo {
+  height: 25px;
+  width: auto;
+  transform: translateY(6px);
+}
 a.workPiece {
   position: relative;
   display: flex;
   width: min(600px, 100%);
   height: min(335px, fit-content);
   transition: width 1s, height 1s;
-  margin: 70px auto;
+  margin: 100px auto;
   background-color: #36363e;
   box-shadow: 5px 3px 15px -3px black;
   padding: 0;
@@ -92,10 +144,6 @@ a.workPiece:hover {
   font-weight: normal;
   margin-top: 315px;
 }
-p {
-  color: white;
-  text-shadow: 2px 1px 3px black;
-}
 .sectionTitle {
   color: white;
   text-align: center;
@@ -105,144 +153,37 @@ p {
   margin: 40px auto;
   border-bottom: #79da79 1px solid;
 }
-#navbar {
-  width: 200px;
-  height: 250px;
-  position: fixed;
-  z-index: 10;
-  left: 0%;
-  top: 5%;
-  font-size: 30px;
-  background-color: #36363e;
-  box-shadow: 0px 0px 10px black;
-}
 #navbar.show {
-  animation-name: showBar;
-  animation-duration: 0.2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
+  margin-left: 0px;
+  transition: margin-left 0.2s;
 }
 #navbar.hide {
-  animation-name: hideBar;
-  animation-duration: 0.2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-@keyframes showBar {
-  0% {
-    margin-left: -205px;
-  }
-  100% {
-    margin-left: 0px;
-  }
-}
-@keyframes hideBar {
-  0% {
-    margin-left: 0px;
-  }
-  100% {
-    margin-left: -205px;
-  }
+  margin-left: -205px;
+  transition: margin-left 0.2s;
 }
 #aboutMe.show {
-  animation-name: showAboutMe;
-  animation-duration: 0.2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
+  height: fit-content;
+  transition: height 0.2s;
 }
 #aboutMe.hide {
-  animation-name: hideAboutMe;
-  animation-duration: 0.2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-@keyframes showAboutMe {
-  0% {
-    height: 300px;
-  }
-  100% {
-    height: fit-content;
-  }
-}
-@keyframes hideAboutMe {
-  0% {
-    height: fit-content;
-  }
-  100% {
-    height: 300px;
-  }
+  height: 300px;
+  transition: height 0.2s;
 }
 #myWork.show {
-  animation-name: showMyWork;
-  animation-duration: 0.2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
+  height: fit-content;
+  transition: height 0.2s;
 }
 #myWork.hide {
-  animation-name: hideMyWork;
-  animation-duration: 0.2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-@keyframes showMyWork {
-  0% {
-    height: 300px;
-  }
-  100% {
-    height: fit-content;
-  }
-}
-@keyframes hideMyWork {
-  0% {
-    height: fit-content;
-  }
-  100% {
-    height: 300px;
-  }
+  height: 300px;
+  transition: height 0.2s;
 }
 #contact.show {
-  animation-name: showContact;
-  animation-duration: 0.2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
+  height: fit-content;
+  transition: height 0.2s;
 }
 #contact.hide {
-  animation-name: hideContact;
-  animation-duration: 0.2s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-@keyframes showContact {
-  0% {
-    height: 300px;
-  }
-  100% {
-    height: fit-content;
-  }
-}
-@keyframes hideContact {
-  0% {
-    height: fit-content;
-  }
-  100% {
-    height: 300px;
-  }
-}
-.LI-profile-badge {
-  float: right;
-  width: fit-content;
-  margin: 50px 10px;
-}
-#contact p.text {
-  float: left;
-  margin: 50px;
-  width: fit-content;
-}
-#navButton {
-  position: relative;
-  left: 80px;
-  top: 0%;
-  float: right;
+  height: 300px;
+  transition: height 0.2s;
 }
 #toggleAboutMe {
   position: absolute;
@@ -271,50 +212,15 @@ p {
   position: relative;
 }
 #moreAboutMe.show {
-  animation-name: showMoreAboutMe;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
+  height: fit-content;
+  transition: height 0.2s;
 }
 #moreAboutMe.hide {
-  animation-name: hideMoreAboutMe;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-}
-@keyframes showMoreAboutMe {
-  0% {
-    height: 0px;
-  }
-  100% {
-    height: fit-content;
-  }
-}
-@keyframes hideMoreAboutMe {
-  0% {
-    height: fit-content;
-  }
-  100% {
-    height: 0px;
-  }
+  height: 0px;
+  transition: height 0.2s;
 }
 .disabled {
   display: none;
-}
-#navButton:hover {
-  color: #79da79;
-}
-.navList {
-  position: fixed;
-  top: 6%;
-  height: 100%;
-  width: 150px;
-  float: left;
-  text-align: left;
-  margin-left: 0px;
-  height: fit-content;
-  border-top: #79da79 2px solid;
-  margin: 25px;
 }
 .accent {
   color: #79da79;
@@ -350,7 +256,6 @@ p.longText {
   animation-fill-mode: both;
   animation-delay: 4s;
 }
-
 @media only screen and (max-width: 500pt) {
   #aboutMe {
     padding: 5%;
@@ -409,7 +314,6 @@ p.longText {
     }
   }
 }
-
 @media only screen and (min-width: 500pt) {
   img.portrait {
     max-height: 100%;
@@ -421,7 +325,7 @@ p.longText {
     max-width: 40%;
     padding: 2%;
     float: right;
-    margin: 100px 0;
+    margin: 100px 3% 100px 0;
     border-left: #79da79 1px solid;
   }
   .headerDescription {
@@ -457,7 +361,6 @@ p.longText {
     }
   }
 }
-
 @keyframes slideInFromRightWithFadeIn {
   0% {
     transform: translateX(40%);
@@ -476,7 +379,6 @@ p.longText {
     opacity: 1;
   }
 }
-
 ::-webkit-scrollbar {
   width: 6px;
   border-width: 2px 3px 2px 2px;

@@ -29,18 +29,21 @@ navButton.onclick=function(){
 };
 
 //toggle About Me section
+let moreAboutMe=document.getElementById('moreAboutMe').classList;
 document.getElementById('toggleAboutMe').onclick=function(){
     document.getElementById('showAboutMe').classList.toggle('disabled');
     document.getElementById('lessAboutMe').classList.toggle('disabled');
-    let moreAboutMe=document.getElementById('moreAboutMe');
-    moreAboutMe.classList.toggle('hide');
-    moreAboutMe.classList.toggle('show');
+    moreAboutMe.toggle('hide');
+    moreAboutMe.toggle('show');
 }
 
 //on menu click
 document.getElementById('goToAboutMe').onclick=function(){
     navButton.click();
     //showSection('aboutMe');
+    moreAboutMe.replace('hide', 'show');
+    document.getElementById('showAboutMe').classList.add('disabled');
+    document.getElementById('lessAboutMe').classList.remove('disabled');
 };
 document.getElementById('goToMyWork').onclick=function(){
     navButton.click();
