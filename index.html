@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="My name is Damian Król. I'm and a Bachelor of Computer Science Engineering and an Information and Communication Technologies technician. This website contains contains information about myself."
+      content="My name is Damian Król. I'm and a Bachelor of Computer Engineering and an Information and Communication Technologies technician. This website contains information about myself along with my portfolio."
     />
     <link rel="stylesheet" href="style.css" />
     <title>Portfolio</title>
@@ -20,8 +20,9 @@
         <a href="#contact" id="goToContact" class="navElement">Contact</a>
       </div>
     </div>
-    <div class="content">
-      <div id="aboutMe" class="show">
+    <div id="aboutMe" class="show">
+      <h1 class="fadeInAfter4s">About Me</h1>
+      <div id="introductionBox">
         <div class="imageContainer">
           <img
             class="portrait"
@@ -34,95 +35,125 @@
             <span class="accent">Hi!</span
             ><span class="introduction"> My name is Damian Król.</span>
           </p>
-          <p class="longText">
+          <p class="longText fadeInAfter4s">
             I'm a programmer living in Lublin, Poland. My main interests are
             Azure cloud computing and programming in Java, however my ambition
-            doesn't end here and I want to keep learning new technologies. After
-            hours I like to sit back, grab a cup of tea and play my bass guitar.
+            doesn't end here and I keep learning new technologies. After hours I
+            like to sit back, grab a cup of tea and play my bass guitar.
           </p>
         </div>
-        <button id="toggleAboutMe">
-          <span id="showAboutMe">More</span>
-          <span id="lessAboutMe" class="disabled">Less</span>
-          About Me
-        </button>
       </div>
-      <div id="moreAboutMe" class="hide">
-        <p class="sectionTitle">About Me</p>
-        <p class="longText">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-          nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-          venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-          Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
-          vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-          vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra
-          quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
-          laoreet. Quisque rutrum.
-        </p>
-      </div>
-      <div id="myWork" class="show">
-        <p class="sectionTitle">My Work</p>
-        <a
-          href="https://github.com/Dkr0l/WeatherAnalysisSystemForTravelling"
-          target="_blank"
-          class="workPiece"
-          id="weatherApp"
+      <button id="toggleAboutMe">
+        <span id="showAboutMe">More</span>
+        <span id="lessAboutMe" class="disabled">Less</span>
+        About Me
+      </button>
+    </div>
+    <div id="moreAboutMe" class="hide">
+      <div><h2>Technical School</h2>
+      <a
+        href="https://www.zsel.lublin.eu/film-promocyjny-20171185"
+        target="_blank"
+      >
+        <img
+          class="aboutMeBanner"
+          src="/images/technicalSchoolBanner.jpg"
+          alt="technical school banner"
+          title="image source: zsel.lublin.eu"
+      /></a>
+      <p class="longText">
+        My technical education began in Electronic Technical School in Lublin, which I graduated as an Information and Communication Technologies technician.
+        At the time of my graduation, this school was in top 5 technical schools in Poland and the best in the region. Incredible teachers I met there taught
+        me everything I needed to pass the exams and more including:</br>
+        -Designing local computer networks and network administration</br>
+        -Commissioning and maintenance of subscriber terminals and connections</br>
+        -Installation and operation of wide area networks
+      
+      </p></div>
+      <div><h2>University</h2>
+      <a
+        href="https://www.pollub.pl/en/kandydaci/studia-i-stopnia/kierunki-ksztalcenia/wydzial-elektrotechniki-i-informatyki"
+        target="_blank"
+      >
+        <img
+          class="aboutMeBanner"
+          src="/images/UniversityBanner.jpg"
+          alt="universityl banner"
+          title="image source: pollub.pl"
+      /></a>
+      <p class="longText">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+        dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+        ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+        arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
+        Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+        enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+        Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+      </p></div>
+    </div>
+    <div id="myWork" class="show">
+      <h1>My Work</h1>
+      <a
+        href="https://github.com/Dkr0l/WeatherAnalysisSystemForTravelling"
+        target="_blank"
+        class="workPiece"
+        id="weatherApp"
+      >
+        <div class="workPieceCaption">
+          <p class="workTitle">Weather Analysis System for Travelling</p>
+          <p class="adnotation">Java Android</p>
+        </div>
+        <img
+          src="/images/project1_weatherApp/autouzupelnianie.png"
+          alt="project 1 screen 1"
+        />
+        <img
+          src="/images/project1_weatherApp/data.png"
+          alt="project 1 screen 2"
+        />
+        <img
+          src="/images/project1_weatherApp/trasa.png"
+          alt="project 1 screen 3"
+        />
+      </a>
+      <a
+        href="https://github.com/Dkr0l/portfolioWebsite"
+        target="_blank"
+        class="workPiece"
+        id="portfolioWebsite"
+      >
+        <div class="workPieceCaption">
+          <p class="workTitle">Portfolio Website</p>
+          <p class="adnotation">Azure CSS HTML JavaScript</p>
+        </div>
+        <img
+          src="/images/project2_portfolioWebsite/website.png"
+          alt="project 2 screen"
+      /></a>
+    </div>
+    <div id="contact" class="show">
+      <h1>Contact</h1>
+      >
+      <p>
+        Message me at:
+        <a id="email" href="mailto:damian9777@gmail.com" target="_blank"
+          >damian9777@gmail.com</a
         >
-          <div class="workPieceCaption">
-            <p class="workTitle">Weather Analysis System for Travelling</p>
-            <p class="adnotation">Java Android</p>
-          </div>
+      </p>
+      <p>
+        You can also find me on
+        <a href="https://linkedin.com/in/dkr0l" target="_blank">
           <img
-            src="/images/project1_weatherApp/autouzupelnianie.png"
-            alt="project 1 screen 1"
-          />
-          <img
-            src="/images/project1_weatherApp/data.png"
-            alt="project 1 screen 2"
-          />
-          <img
-            src="/images/project1_weatherApp/trasa.png"
-            alt="project 1 screen 3"
+            id="linkedinLogo"
+            src="/images/linkedIn_logo.png"
+            alt="linkedIn logo"
           />
         </a>
-        <a
-          href="https://github.com/Dkr0l/portfolioWebsite"
-          target="_blank"
-          class="workPiece"
-          id="portfolioWebsite"
-        >
-          <div class="workPieceCaption">
-            <p class="workTitle">Portfolio Website</p>
-            <p class="adnotation">Azure CSS HTML JavaScript</p>
-          </div>
-          <img
-            src="/images/project2_portfolioWebsite/website.png"
-            alt="project 2 screen"
-        /></a>
-      </div>
-      <div id="contact" class="show">
-        <p class="sectionTitle">Contact</p>
-        <p>
-          Message me at:
-          <a id="email" href="mailto:damian9777@gmail.com" target="_blank"
-            >damian9777@gmail.com</a
-          >
-        </p>
-        <p>
-          You can also find me on
-          <a href="https://linkedin.com/in/dkr0l" target="_blank">
-            <img
-              id="linkedinLogo"
-              src="/images/linkedIn_logo.png"
-              alt="linkedIn logo"
-            />
-          </a>
-        </p>
-      </div>
+      </p>
     </div>
     <script src="index.js"></script>
   </body>

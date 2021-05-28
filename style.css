@@ -5,7 +5,6 @@ html {
 }
 p {
   color: white;
-  text-shadow: 2px 1px 3px black;
 }
 a {
   color: white;
@@ -56,16 +55,17 @@ body {
   overflow-x: hidden;
   margin: 0%;
   padding: 0%;
-}
-.content {
-  padding: 0%;
   background-color: #1b1b1f;
 }
 #aboutMe {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 100px 5% 50px 5%;
+  padding: 100px 0% 50px 0%;
+}
+#introductionBox {
+  width: fit-content;
+  margin: auto;
 }
 #myWork {
   box-shadow: 0px 0px 20px 0px black;
@@ -133,7 +133,6 @@ a.workPiece:hover {
   width: 600px;
   text-align: center;
   font-weight: bold;
-  text-shadow: none;
   color: rgba(255, 255, 255, 0.5);
 }
 .workTitle {
@@ -144,7 +143,8 @@ a.workPiece:hover {
   font-weight: normal;
   margin-top: 315px;
 }
-.sectionTitle {
+h1 {
+  font-weight: normal;
   color: white;
   text-align: center;
   width: fit-content;
@@ -152,6 +152,23 @@ a.workPiece:hover {
   font-size: 60px;
   margin: 40px auto;
   border-bottom: #79da79 1px solid;
+  text-shadow: 2px 1px 3px black;
+}
+h2 {
+  font-weight: lighter;
+  color: white;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  font-size: 40px;
+  margin: 60px auto 30px auto;
+  border-bottom: #79da79 1px solid;
+  text-shadow: 2px 1px 3px black;
+}
+#moreAboutMe div {
+  width: 100%;
+  height: fit-content;
+  overflow: auto;
 }
 #navbar.show {
   margin-left: 0px;
@@ -191,7 +208,7 @@ a.workPiece:hover {
   width: 110px;
   height: 18px;
   padding: 0%;
-  margin: 0px calc(45% - 55px);
+  margin: 0px calc(50% - 55px);
   transition: width 0.5s, height 0.5s, margin 0.5s;
   text-align: center;
   background-color: #36363e;
@@ -203,7 +220,7 @@ a.workPiece:hover {
   color: #79da79;
   width: 120px;
   height: 20px;
-  margin: 10px calc(50% - 60px);
+  margin: 0px calc(50% - 60px);
   transition: width 0.5s, height 0.5s, margin 0.5s;
 }
 #moreAboutMe {
@@ -214,11 +231,17 @@ a.workPiece:hover {
 }
 #moreAboutMe.show {
   height: fit-content;
-  transition: height 0.2s;
+  transition: height 1s;
 }
 #moreAboutMe.hide {
   height: 0px;
-  transition: height 0.2s;
+  transition: height 1s;
+}
+.aboutMeBanner {
+  display: block;
+  max-width: 90%;
+  max-height: 40vh;
+  margin: auto;
 }
 .disabled {
   display: none;
@@ -251,6 +274,8 @@ p.longText {
   word-wrap: break-word;
   text-indent: 50px;
   text-align: justify;
+}
+.fadeInAfter4s {
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-timing-function: ease;
@@ -258,8 +283,8 @@ p.longText {
   animation-delay: 4s;
 }
 @media only screen and (max-width: 500pt) {
-  #aboutMe {
-    padding: 5%;
+  #introductionBox {
+    padding-left: 8%;
   }
   .workPieceCaption p {
     width: 100%;
@@ -280,7 +305,7 @@ p.longText {
     margin-bottom: 4%;
   }
   .imageContainer {
-    padding: 5%;
+    padding: 10%;
     margin-top: 50px;
   }
   p.header {
@@ -326,7 +351,7 @@ p.longText {
     max-width: 40%;
     padding: 2%;
     float: right;
-    margin: 100px 3% 100px 0;
+    margin: 0px 3% 100px 0;
     border-left: #79da79 1px solid;
   }
   .headerDescription {
@@ -334,7 +359,7 @@ p.longText {
     width: 45%;
     height: 100%;
     padding-right: 5%;
-    margin: 80px 0px 50px 0px;
+    margin: 0px auto 50px auto;
     position: relative;
   }
   p.header {
@@ -343,6 +368,10 @@ p.longText {
   }
   p.longText {
     font-size: min(2.2vw, 28px);
+  }
+  .aboutMeBanner {
+    float: right;
+    margin-left: 30px;
   }
   @keyframes accentFadeIn {
     0% {
