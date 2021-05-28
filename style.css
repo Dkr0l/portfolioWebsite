@@ -65,7 +65,7 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 100px 0 50px 0;
+  padding: 100px 5% 50px 5%;
 }
 #myWork {
   box-shadow: 0px 0px 20px 0px black;
@@ -186,11 +186,12 @@ a.workPiece:hover {
   transition: height 0.2s;
 }
 #toggleAboutMe {
-  position: absolute;
+  position: relative;
   bottom: 0px;
   width: 110px;
   height: 18px;
-  margin: 10px calc(50% - 55px);
+  padding: 0%;
+  margin: 0px calc(45% - 55px);
   transition: width 0.5s, height 0.5s, margin 0.5s;
   text-align: center;
   background-color: #36363e;
@@ -330,18 +331,18 @@ p.longText {
   }
   .headerDescription {
     float: right;
-    width: 50%;
+    width: 45%;
     height: 100%;
     padding-right: 5%;
     margin: 80px 0px 50px 0px;
     position: relative;
   }
   p.header {
-    font-size: 3.4vw;
+    font-size: 3vw;
     margin: 40px 0px;
   }
   p.longText {
-    font-size: min(2.5vw, 28px);
+    font-size: min(2.2vw, 28px);
   }
   @keyframes accentFadeIn {
     0% {
