@@ -1,7 +1,9 @@
-html {
+* {
   font-family: Consolas, monaco, monospace;
-  padding: 0%;
   scroll-behavior: smooth;
+}
+html {
+  padding: 0%;
 }
 p {
   color: white;
@@ -205,22 +207,23 @@ h2 {
 #toggleAboutMe {
   position: relative;
   bottom: 0px;
-  width: 110px;
-  height: 18px;
+  width: 160px;
+  height: 22px;
   padding: 0%;
-  margin: 0px calc(50% - 55px);
+  margin: 0px calc(50% - 80px);
   transition: width 0.5s, height 0.5s, margin 0.5s;
   text-align: center;
   background-color: #36363e;
   color: white;
   border: none;
   border-radius: 10px;
+  font-size: 20px;
 }
 #toggleAboutMe:hover {
   color: #79da79;
-  width: 120px;
-  height: 20px;
-  margin: 0px calc(50% - 60px);
+  width: 170px;
+  height: 25px;
+  margin: 0px calc(50% - 85px);
   transition: width 0.5s, height 0.5s, margin 0.5s;
 }
 #moreAboutMe {
@@ -230,16 +233,16 @@ h2 {
   position: relative;
 }
 #moreAboutMe.show {
-  height: fit-content;
-  transition: height 1s;
+  max-height: 4000px;
+  transition: max-height 1s;
 }
 #moreAboutMe.hide {
-  height: 0px;
-  transition: height 1s;
+  max-height: 0px;
+  transition: max-height 0.5s;
 }
 .aboutMeBanner {
   display: block;
-  max-width: 90%;
+  max-width: 60%;
   max-height: 40vh;
   margin: auto;
 }
@@ -283,8 +286,14 @@ p.longText {
   animation-delay: 4s;
 }
 @media only screen and (max-width: 500pt) {
+  .aboutMeBanner {
+    width: 100%;
+  }
   #introductionBox {
     padding-left: 8%;
+  }
+  #aboutMe {
+    padding-top: 0%;
   }
   .workPieceCaption p {
     width: 100%;
@@ -309,7 +318,7 @@ p.longText {
     margin-top: 50px;
   }
   p.header {
-    font-size: 6vw;
+    font-size: 5vw;
     margin: 0px;
     margin-bottom: 15px;
   }
@@ -335,7 +344,7 @@ p.longText {
     }
     100% {
       opacity: 1;
-      font-size: 6vw;
+      font-size: 5vw;
       transform: translateY(0%);
     }
   }
