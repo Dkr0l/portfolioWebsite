@@ -27,7 +27,11 @@ a {
   position: relative;
   left: 80px;
   top: 0%;
+  font-size: 40px;
   float: right;
+}
+#navButton span {
+  margin-left: -20px;
 }
 #navButton:hover {
   color: #79da79;
@@ -213,11 +217,18 @@ h2 {
   margin: 0px calc(50% - 80px);
   transition: width 0.5s, height 0.5s, margin 0.5s;
   text-align: center;
-  background-color: #36363e;
+  background-color: #36363e00;
   color: white;
   border: none;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 9px;
+  font-size: 18px;
+}
+#toggleAboutMe i {
+  font-size: 50px;
+}
+.moveUp {
+  margin-top: -20px;
+  color: inherit;
 }
 #toggleAboutMe:hover {
   color: #79da79;
@@ -323,7 +334,7 @@ p.longText {
     margin-bottom: 15px;
   }
   p.longText {
-    font-size: min(25px, 10vw);
+    font-size: min(25px, 4vw);
   }
   .headerDescription {
     width: 90%;

@@ -9,11 +9,14 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
 
   <body>
     <div id="navbar" class="hide">
-      <p id="navButton">MENU</p>
+      <p id="navButton" class="material-icons">menu
+        <span id="menuArrowRight"><i class="material-icons">chevron_right</i></span>
+        <span id="menuArrowLeft" class="disabled"><i class="material-icons">chevron_left</i></span></p>
       <div class="navList">
         <a href="#aboutMe" id="goToAboutMe" class="navElement">About Me</a>
         <a href="#myWork" id="goToMyWork" class="navElement">My Work</a>
@@ -44,9 +47,8 @@
         </div>
       </div>
       <button id="toggleAboutMe">
-        <span id="showAboutMe">More</span>
-        <span id="lessAboutMe" class="disabled">Less</span>
-        About Me
+        <span id="showAboutMe">Expand<br><i class="material-icons moveUp">arrow_drop_down</i></span>
+        <span id="lessAboutMe" class="disabled"><i class="material-icons">arrow_drop_up</i><br><p class="moveUp">Hide</p></span>
       </button>
     </div>
     <div id="moreAboutMe" class="hide">
@@ -81,17 +83,15 @@
           title="image source: pollub.pl"
       /></a>
       <p class="longText">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-        dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-        ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-        arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-        Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-        dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-        enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-        Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+        During the 7 semesters I spent at Lublin University of Technology I've had the pleasure of learning basics of various technologies from masters in the field.
+        Said technologies include but are not limited to:<br>
+        -Creating web applications with Laravel<br>
+        -Writing processing and sorting algorithms<br>
+        -Creating math models in MATLAB<br>
+        -Linux systems administration<br>
+        -Graphic design and 3D modelling<br>
+        I also took part in a summer internship led by Doctor of Engineering Tomasz Szymczyk,
+        during which I was working on adaptation of a ready-made PlayStation VR application created in Unreal Engine for Android using Google Cardboard platform.
       </p></div>
     </div>
     <div id="myWork" class="show">
