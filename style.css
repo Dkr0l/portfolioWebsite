@@ -90,10 +90,13 @@ body {
   width: fit-content;
   margin: 100px auto;
 }
-#linkedinLogo {
-  height: 25px;
-  width: auto;
-  transform: translateY(6px);
+.inlineLogo {
+  display: inline;
+  height: 3em;
+  transform: translateY(1em);
+}
+.inlineRounded {
+  border-radius: 1.5em;
 }
 a.workPiece {
   position: relative;
@@ -245,17 +248,18 @@ h2 {
 }
 #moreAboutMe.show {
   max-height: 4000px;
-  transition: max-height 1s;
+  transition: max-height 2s;
 }
 #moreAboutMe.hide {
   max-height: 0px;
   transition: max-height 0.5s;
 }
 .aboutMeBanner {
-  display: block;
+  display: inline-block;
   max-width: 60%;
   max-height: 40vh;
-  margin: auto;
+  margin: 10px 0px;
+  box-shadow: 3px 2px 7px black;
 }
 .disabled {
   display: none;
@@ -387,7 +391,7 @@ p.longText {
     margin: 40px 0px;
   }
   p.longText {
-    font-size: min(2.2vw, 28px);
+    font-size: max(1vw, 20px);
   }
   .aboutMeBanner {
     float: right;
