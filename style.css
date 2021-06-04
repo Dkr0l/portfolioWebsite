@@ -29,6 +29,7 @@ a {
   top: 0%;
   font-size: 40px;
   float: right;
+  text-shadow: 2px 2px 5px black, -2px -2px 5px black;
 }
 #navButton span {
   margin-left: -20px;
