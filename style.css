@@ -124,6 +124,9 @@ a.workPiece:hover {
   width: 100%;
   height: max-content;
 }
+#powloczeni_webshop img {
+  width: 100%;
+}
 .workPieceCaption {
   position: absolute;
   width: 100%;
