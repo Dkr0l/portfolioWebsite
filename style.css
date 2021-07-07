@@ -71,14 +71,16 @@ body {
   padding: 100px 0% 50px 0%;
 }
 #introductionBox {
-  width: fit-content;
+  width: 100%;
+  height: fit-content;
   margin: auto;
 }
 #myWork {
   box-shadow: 0px 0px 20px 0px black;
   background-color: #28282e;
-  width: 100%;
+  width: 104%;
   overflow: hidden;
+  margin-left: -2%;
 }
 #contact {
   width: 100%;
@@ -178,10 +180,18 @@ h2 {
   border-bottom: #79da79 1px solid;
   text-shadow: 2px 1px 3px black;
 }
+h2 img{
+  border-bottom: unset;
+  background: white;
+  margin: 0;
+  max-height: 1.2em;
+  transform: translateY(0em)!important;
+}
 #moreAboutMe div {
   width: 100%;
   height: fit-content;
   overflow: auto;
+  margin-bottom: 50px;
 }
 #navbar.show {
   margin-left: 0px;
@@ -259,7 +269,7 @@ h2 {
   transition: max-height 0.5s;
 }
 .aboutMeBanner {
-  display: inline-block;
+  display: block;
   max-width: 60%;
   max-height: 40vh;
   margin: 10px 0px;
@@ -307,9 +317,11 @@ p.longText {
 @media only screen and (max-width: 500pt) {
   .aboutMeBanner {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
   #introductionBox {
-    padding-left: 8%;
+    padding: 5%;
   }
   #aboutMe {
     padding-top: 0%;
@@ -344,6 +356,13 @@ p.longText {
   p.longText {
     font-size: min(25px, 4vw);
   }
+  #technologies p.longText{
+    font-size: 4vw;
+    text-indent: 0px;
+    margin-left: 10%;
+    margin-bottom: 8%;
+    float: left;
+  }
   .headerDescription {
     width: 90%;
     padding-top: 4%;
@@ -369,37 +388,50 @@ p.longText {
   }
 }
 @media only screen and (min-width: 500pt) {
+  body{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
   img.portrait {
     max-height: 100%;
-    max-height: 390px;
-    max-width: 90%;
+  }
+  #introductionBox{
+    height: 26vw;
+    margin-bottom: 150px;
   }
   .imageContainer {
-    max-height: 100%;
-    max-width: 40%;
+    height: 98%;
     padding: 2%;
-    float: right;
-    margin: 0px 3% 100px 0;
-    border-left: #79da79 1px solid;
+    float: left;
   }
   .headerDescription {
-    float: right;
-    width: 45%;
+    float:left;
+    width: 58%;
     height: 100%;
-    padding-right: 5%;
-    margin: 0px auto 50px auto;
+    padding: 3% 2% 0 5%;
     position: relative;
+    border-right: #79da79 1px solid;
   }
   p.header {
     font-size: 3vw;
-    margin: 40px 0px;
+    margin: 20px 0px;
   }
   p.longText {
-    font-size: max(1vw, 20px);
+    font-size: 2vw;
+  }
+  #moreAboutMe p.longText{
+    font-size: 1.6vw;
+  }
+  #technologies p.longText{
+    text-indent: 0px;
+    margin-left: 16%;
+    float: left;
   }
   .aboutMeBanner {
     float: right;
     margin-left: 30px;
+    width: 40%;
+    max-height: 100%;
   }
   @keyframes accentFadeIn {
     0% {

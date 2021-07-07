@@ -26,13 +26,6 @@
     <div id="aboutMe" class="show">
       <h1 class="fadeInAfter4s">About Me</h1>
       <div id="introductionBox">
-        <div class="imageContainer">
-          <img
-            class="portrait"
-            src="images/profil.png"
-            alt="Portrait picture"
-          />
-        </div>
         <div class="headerDescription">
           <p class="header">
             <span class="accent">Hi!</span
@@ -45,6 +38,13 @@
             like to sit back, grab a cup of tea and play my bass guitar.
           </p>
         </div>
+        <div class="imageContainer">
+          <img
+            class="portrait"
+            src="images/profil.png"
+            alt="Portrait picture"
+          />
+        </div>
       </div>
       <button id="toggleAboutMe">
         <span id="showAboutMe">Expand<br><i class="material-icons moveUp">arrow_drop_down</i></span>
@@ -52,15 +52,15 @@
       </button>
     </div>
     <div id="moreAboutMe" class="hide">
-      <div><h2>Technologies I know</h2>
-        <div style="width: 100%;text-align: center;"><img
+      <div id="technologies"><h2>Technologies I know</h2>
+        <div style="width: 100%;"><img
           class="aboutMeBanner"
-          style="max-width: 90%; float: none;"
+          style="width: 90%; float: none; margin: auto;"
           src="/images/programmingBanner.jpg"
           alt="programming banner"
       /></div>
-        <p class="longText" style="text-indent: 0px; margin-left: 20%; float: left;">
-          I know and use:<br>
+        <p class="longText">
+          I have used in projects:<br>
           &emsp;<img class="inlineLogo inlineRounded" src="images/java_logo.png" alt="java logo"> Java<br>
           &emsp;<img class="inlineLogo inlineRounded" src="images/HTML_logo.png" alt="HTML logo"> HTML<br>
           &emsp;<img class="inlineLogo inlineRounded" src="images/CSS_logo.png" alt="CSS logo"> CSS<br>
@@ -68,14 +68,15 @@
           &emsp;<img class="inlineLogo inlineRounded" src="images/azure_logo.png" alt="azure logo"> Azure<br>
           &emsp;<img class="inlineLogo inlineRounded" src="images/SQL_logo.png" alt="SQL logo"> SQL<br>
           <br></p>
-          <p class="longText" style="text-indent: 0px; margin-left: 20%; float: left;">
+          <p class="longText">
             I'm currently learning:<br>
             &emsp;<img class="inlineLogo inlineRounded" src="images/python_logo.png" alt="python logo"> Python<br>
             &emsp;<img class="inlineLogo inlineRounded" src="images/django_logo.jpg" alt="django logo"> Django<br>
             &emsp;<img class="inlineLogo inlineRounded" src="images/bootstrap_logo.jpg" alt="bootstrap logo"> Bootstrap<br>
+            &emsp;<img class="inlineLogo" src="images/spring_logo.svg" alt="bootstrap logo"> Spring<br>
           </p>
-          <p class="longText" style="text-indent: 0px; margin-left: 20%; float: left;">
-          I'm interested in and want to get to know better:<br>
+          <p class="longText">
+          I'm interested in and want to <br> get to know better:<br>
           &emsp;<img class="inlineLogo inlineRounded" src="images/machineLearning_logo.jpg" alt="machine learning logo"> machine learning<br>
         </p></div>
       <div><h2>Technical School</h2>
@@ -105,7 +106,7 @@
         <img
           class="aboutMeBanner"
           src="/images/UniversityBanner.jpg"
-          alt="universityl banner"
+          alt="university banner"
           title="image source: pollub.pl"
       /></a>
       <p class="longText">
@@ -119,6 +120,21 @@
         I also took part in a summer internship led by Doctor of Engineering Tomasz Szymczyk,
         during which I was working on adaptation of a ready-made PlayStation VR application created in Unreal Engine for Android using Google Cardboard platform.
       </p></div>
+      <div><h2>Transition Technologies</h2>
+      <a href="https://ttsw.com.pl/"
+      target="_blank">
+        <img
+        class="aboutMeBanner"
+        src="/images/TTSW_logo.svg"
+        alt="Transition Technologies logo"
+        title="official website"
+        style="box-shadow: none;">
+      </a>
+      <p class="longText">
+        In July 2021 I started a 3-month internship in Transition Technologies-Software.
+        In this time I will continue to work on my Java skills and learn new tools such as Spring Cloud.
+      </p>
+      </div>
     </div>
     <div id="myWork" class="show">
       <h1>My Work</h1>
