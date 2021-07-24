@@ -347,8 +347,9 @@ p.longText {
     margin-bottom: 4%;
   }
   .imageContainer {
-    padding: 10%;
-    margin-top: 50px;
+    padding: 0% 10% 10% 10%;
+    margin-top: 0px;
+    height: 70vmin;
     order: 1;
   }
   p.header {
