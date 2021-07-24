@@ -322,6 +322,8 @@ p.longText {
   }
   #introductionBox {
     padding: 5%;
+    display: flex;
+    flex-direction: column;
   }
   #aboutMe {
     padding-top: 0%;
@@ -347,6 +349,7 @@ p.longText {
   .imageContainer {
     padding: 10%;
     margin-top: 50px;
+    order: 1;
   }
   p.header {
     font-size: 5vw;
@@ -354,7 +357,7 @@ p.longText {
     margin-bottom: 15px;
   }
   p.longText {
-    font-size: min(25px, 4vw);
+    font-size: 3vw;
   }
   #technologies p.longText{
     font-size: 4vw;
@@ -368,6 +371,7 @@ p.longText {
     padding-top: 4%;
     border-top: #79da79 1px solid;
     margin-bottom: 50px;
+    order: 2;
   }
   @keyframes accentFadeIn {
     0% {
