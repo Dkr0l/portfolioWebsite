@@ -85,6 +85,7 @@ body {
 #contact {
   width: 100%;
   overflow: hidden;
+  text-align: center;
 }
 #email {
   text-decoration: underline;
@@ -135,9 +136,9 @@ a.workPiece:hover {
   height: 100%;
   background: radial-gradient(
     circle,
-    rgba(0, 0, 15, 0.65) 0%,
-    rgba(0, 0, 15, 0.5) 80%,
-    rgba(0, 0, 15, 0.3) 100%
+    rgba(0, 0, 15, 0.55) 0%,
+    rgba(0, 0, 15, 0.5) 70%,
+    rgba(0, 0, 15, 0.4) 100%
   );
   mix-blend-mode: luminosity;
 }
